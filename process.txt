@@ -1,0 +1,5 @@
+1. src/page.tsx and src/layout.tsx modify 
+2. github connect
+3. Noto_Serif_Bengali Bengali font import in src/layout.tsx 
+    * ceate a funtion for Bengali noto font
+    * declear the className={`${notoSerifBengali.className}} lang property
