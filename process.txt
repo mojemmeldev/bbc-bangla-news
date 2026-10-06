@@ -15,3 +15,25 @@
             })
 5. daisy Ui installation 
 6. complate heading done and github push
+
+<Navber>
+7. create components/Navber.tsx 
+    * api fetching for cetagory nav list
+    * fetching data.data array
+    * filtering for #const navCat= navData.filter(n=> n.scrapable ===true);
+    * map call for showing #navCat.map ((n,index)=><Link key={index}  href={n.slug}>{n.title}</Link>)
+    * type declear for Typesricpt. and declear this const navData:TNav[]=data.data;
+    * connect to api/layout.tsx
+
+<Marquee>
+8.create components/Marquee.tsx
+    *  instll (npm i react-marquee-text) from (www.npmjs.com/package/react-marquee-text)
+    * import on Marquee.tsx 
+        import MarqueeText from "react-marquee-text"
+        import "react-marquee-text/dist/styles.css" (write this module)
+    * fetching marquee new data ('https://news-api-v2.vercel.app/api/news?limit=10')
+    * declear on funtion 
+        const data=await marqueeDataFetch();
+        const headlines:TMar[] =data.data;
+    * map on the <MarqueeText> maping .... </MarqueeText>
+    * connect to api/page.tsx
