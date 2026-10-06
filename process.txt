@@ -1,5 +1,17 @@
+
+
 1. src/page.tsx and src/layout.tsx modify 
 2. github connect
 3. Noto_Serif_Bengali Bengali font import in src/layout.tsx 
     * ceate a funtion for Bengali noto font
     * declear the className={`${notoSerifBengali.className}} lang property
+4. create /app/components/Header.tsx 
+    * create a heading 
+        ** logo #Image src={"/logo.webp"} width={50} height={50} alt='logo'></Image>
+        ** heading 
+        ** date 
+            const date = new Date().toLocaleDateString("bn-DB", {
+            dateStyle: "full"
+            })
+5. daisy Ui installation 
+6. complate heading done and github push
