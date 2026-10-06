@@ -21,7 +21,7 @@ const resCatagoryDataFetch = async()=>{
 const Navber =async () => {
 const data= await resCatagoryDataFetch();
 const navData:TNav[]=data.data;
-console.log(navData);
+
 const navCat= navData.filter(n=> n.scrapable ===true);
 
 
@@ -31,7 +31,7 @@ const navCat= navData.filter(n=> n.scrapable ===true);
         <div className='flex justify-center items-center gap-4'>
             <Link href="/">হোম</Link>
             {
-                navCat.map ((n,index)=><Link key={index}  href={n.slug}>{n.title}</Link>)
+                navCat.map ((n,index)=><Link key={index}  href={`/${n.slug}`}>{n.title}</Link>)
             }
         </div>
     );

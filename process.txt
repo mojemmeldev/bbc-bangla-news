@@ -37,3 +37,17 @@
         const headlines:TMar[] =data.data;
     * map on the <MarqueeText> maping .... </MarqueeText>
     * connect to api/page.tsx
+
+<HomePage>
+9. create components/HomePage.tsx 
+    * fetching news data
+    * declear in funtion 
+        const newsData = await newsDataFecth();
+        const data = newsData.data;
+        const mainNews = data[0].articles;
+    * use grid
+    * create components/homeshare/mainNews.tsx and connect with components/HomePage.tsx  by props
+    * declear map and slice mathod 
+        const firstNews = news[0]; for used one news card
+        const otherNews = news.slice(1); for used other news headlines
+    * Typesricpt interface create and declear

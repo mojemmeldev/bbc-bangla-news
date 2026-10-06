@@ -22,7 +22,7 @@ const Marquee =async () => {
     const data=await marqueeDataFetch();
     const headlines:TMar[] =data.data;
 
-    console.log(headlines);
+  
 
     return (
         <div className='bg-red-600 text-white mt-5'>
