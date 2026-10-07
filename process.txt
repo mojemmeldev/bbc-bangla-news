@@ -46,8 +46,17 @@
         const data = newsData.data;
         const mainNews = data[0].articles;
     * use grid
-    * create components/homeshare/mainNews.tsx and connect with components/HomePage.tsx  by props
+    * create components/homeshare/MainNews.tsx and connect with components/HomePage.tsx  by props
     * declear map and slice mathod 
         const firstNews = news[0]; for used one news card
         const otherNews = news.slice(1); for used other news headlines
     * Typesricpt interface create and declear
+
+<otherNews>
+
+10.  components/HomePage.tsx
+    * declear the data fetching #(const otherNews = data.slice(1);)
+    * declear the props in another components
+    * create components/homeshare/otherNews.tsx
+        * get props and get api data 
+        * maping and add to card

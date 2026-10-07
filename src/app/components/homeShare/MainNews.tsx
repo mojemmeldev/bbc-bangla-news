@@ -16,9 +16,9 @@ const MainNews = ({ news }:{news:TMainNews[]}) => {
     const otherNews = news.slice(1);
     
     return (
-        <div className=' grid grid-cols-2'>
+        <div className=' grid grid-cols-2 gap-3'>
             <div >
-                <div className="card bg-base-100 w-96 shadow-sm">
+                <div className="card bg-base-100 shadow-sm">
                     <figure>
                         <img
                             src={firstNews.imageUrl}
