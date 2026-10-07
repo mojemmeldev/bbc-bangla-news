@@ -13,7 +13,7 @@ const Header = () => {
     })
 
     return (
-        <div className='c '>
+        <div className='mt-10 '>
             <div className=' mx-auto grid max-w-[1280px] grid-cols-3 items-center '>
                 <div ></div>
 
@@ -21,7 +21,7 @@ const Header = () => {
                     <Image src={"/logo.webp"} width={50} height={50} alt='logo'></Image>
 
                     <div className='flex flex-col item'>
-                        <h1 className=' font-bold text-3xl'>Bangla News 24</h1>
+                        <h1 className=' font-bold text-3xl text-red-800'>Bangla News 24</h1>
                         <p>{date}</p>
                     </div>
                 </div>

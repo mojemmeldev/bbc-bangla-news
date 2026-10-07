@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import MarqueeText from "react-marquee-text"
 import "react-marquee-text/dist/styles.css"
@@ -30,9 +31,15 @@ const Marquee =async () => {
                 <div className='bg-red-900 py-1 px-2'>সর্বশেষ</div>
             <MarqueeText className='py-1' direction='right' duration={10} >
             {
-                headlines.map((h,index)=><span key={index}> {h.title}
+                headlines.map((h,index)=>
+                <Link key={index} href={`/articel/${h.id}`} >
+                
+                <span > {h.title}
                 <span className='mx-5'>•</span>
-                </span>)
+                </span>
+                </Link>
+                )
+
             }
             </MarqueeText>
             </div>

@@ -25,8 +25,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <Header></Header>
         <Navber></Navber>
-        
+        <Marquee></Marquee>
+        <main className="max-w-[1280px] mx-auto ">
+
         {children}
+        </main>
         
         </body>
     </html>

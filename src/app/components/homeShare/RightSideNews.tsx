@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 
@@ -23,12 +24,16 @@ const RightSideNews =async () => {
         <div className=' border border-gray-300 ml-6'>
             <h2 className=' font-bold text-2xl'>সর্বাধিক পঠিত</h2>
             {
-                newsData.map((nd)=><div key={nd.id}>
+                newsData.map((nd)=>
+                    <Link key={nd.id} href={`/articel/${nd.id}`}>
+                <div >
                     <div className='flex  items-center gap-5 py-4  px-4'>
                         <h1 className='font-bold text-2xl text-red-700'>{nd.rank}</h1>
                         <p>{nd.title}</p>   
                     </div>
-                </div>)
+                </div>
+                </Link>
+                )
             }
         </div>
     );

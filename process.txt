@@ -68,3 +68,33 @@
     * data maping into return 
     * Typesricpt declear
     * connect to HomePage.tsx 
+
+<dynamic cetagory>
+12. create /app/cetagory/[cetagoryid]/page.tsx  
+    * /components/Navber.tsx declear into under the maping method #href={`/category/${n.slug}`}
+    * use ({params}) props into the funtion perametter
+    * get dynamic data fetching call 
+        const { categoryid } = await params;
+        const res = await fetch(`https://news-api-v2.vercel.app/api/category/${categoryid}`)
+        const data = await res.json();
+        const catData = data.data;
+    * catData maping and showing in the card
+    * Typesricpt declear
+
+<dynamic articles>
+13. create /app/article/[articleId]/page.tsx 
+    * go to /[cetagoryid]/page.tsx  and change the href
+            <Link key={cd.id} href={`/articel/${cd.id}`}>
+    * data fetching in /[articleId]/page.tsx 
+            const ArticelPage = async ({ params }: {params:{articelId:string}}) => {
+            const {articelId}= await params
+            const res = await fetch(`https://news-api-v2.vercel.app/api/article/${articelId}`)
+            const data= await res.json()
+            const artData=data.data
+            }
+    * declear into return and complate the requirment
+            <h2>{artData.title}</h2>
+    * Typesricpt add -> ({ params }: {params:{articelId:string}})
+
+<Link connect all homepage>
+14. all homepage news connect to /[articleId]/page.tsx by Link  href={`/articel/${**.id}`}>

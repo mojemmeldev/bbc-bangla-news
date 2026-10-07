@@ -28,10 +28,10 @@ const navCat= navData.filter(n=> n.scrapable ===true);
     
 
     return (
-        <div className='flex justify-center items-center gap-4'>
+        <div className='flex justify-center items-center gap-4 mt-10'>
             <Link href="/">হোম</Link>
             {
-                navCat.map ((n,index)=><Link key={index}  href={`/${n.slug}`}>{n.title}</Link>)
+                navCat.map ((n,index)=><Link key={index}  href={`/category/${n.slug}`}>{n.title}</Link>)
             }
         </div>
     );
