@@ -1,6 +1,24 @@
+import Image from 'next/image';
 import React from 'react';
 
-const OtherNews = ({ otherNews }) => {
+interface TONews {
+    
+    curationId:string,
+    title:string,
+    articles:{
+
+        id:string,
+        imageUrl:string,
+        imageAlt:string,
+        title:string,
+        description:string
+    }[],
+
+}
+
+
+
+const OtherNews = ({ otherNews }:{otherNews:TONews[]}) => {
 
 
     return (
@@ -19,7 +37,8 @@ const OtherNews = ({ otherNews }) => {
                                                     <figure>
                                                         <img
                                                             src={an.imageUrl}
-                                                            alt={"firstNews.imageAlt"}
+                                                            alt={"an.imageAlt"}
+                                                           
                                                         />
                                                     </figure>
                                                     <div className="card-body">

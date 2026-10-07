@@ -52,11 +52,19 @@
         const otherNews = news.slice(1); for used other news headlines
     * Typesricpt interface create and declear
 
-<otherNews>
-
+<homepage otherNews>
 10.  components/HomePage.tsx
     * declear the data fetching #(const otherNews = data.slice(1);)
     * declear the props in another components
     * create components/homeshare/otherNews.tsx
         * get props and get api data 
         * maping and add to card
+        * Typesricpt declear
+ 
+<homepage rightside news>
+11. create components/homeshare/rightsidenews.tsx
+    * data fetching form ('https://news-api-v2.vercel.app/api/news/most-read')
+    * declear into funtion (const newsData:TRnews[]= data.data;)
+    * data maping into return 
+    * Typesricpt declear
+    * connect to HomePage.tsx 

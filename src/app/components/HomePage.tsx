@@ -1,6 +1,7 @@
 import React from 'react';
 import MainNews from './homeShare/MainNews';
 import OtherNews from './homeShare/OtherNews';
+import RightSideNews from './homeShare/RightSideNews';
 
 const newsDataFecth = async () => {
     const res = await fetch('https://news-api-v2.vercel.app/api/news/sections');
@@ -8,7 +9,12 @@ const newsDataFecth = async () => {
     return datas;
 }
 
+
+
+
 const HomePage = async () => {
+
+    // Left side news
 
     const newsData = await newsDataFecth();
     const data = newsData.data;
@@ -17,6 +23,9 @@ const HomePage = async () => {
 
     const otherNews = data.slice(1);
     console.log("others", otherNews);
+
+   
+
 
     return (
         <div >
@@ -27,7 +36,10 @@ const HomePage = async () => {
                         <OtherNews otherNews={otherNews}></OtherNews>
                     </div>
                 </div>
-                <div className='col-span-1'>2</div>
+
+                <div className='col-span-1'>2
+                    <RightSideNews></RightSideNews>
+                </div>
             </div>
         </div>
     );
